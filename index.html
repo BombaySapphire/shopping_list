@@ -2,12 +2,22 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Hello World</title>
-	<link rel="stylesheet" src="css/style.css"></script>
+	<title>Shopping List app</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css"></script>
 	<script src="external/jquery-2.1.4.min.js"></script>
 	<script src="js/scripts.js"></script>
 </head>
 <body>
-	
+	<div class="outerbox">
+		<h1>Cart</h1>
+		<form>
+			<input type="text" class="item">
+			<button id="addItems">Add</button>
+			<ul id="toBuy">
+			</ul>
+			<h3>Purchased</h3>
+			<ul id="purchased"></ul>
+		</form>
+	</div>
 </body>
 </html>
