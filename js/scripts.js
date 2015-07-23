@@ -8,11 +8,11 @@ function initializePage() {
 	var iteminput = $('input#item');
 	iteminput.val("");
 
-	$('button#addItem').click(shoppingList);
+	$('a#addItem').click(shoppingList);
 
 	function shoppingList() {
 		if($('input#item').val() === '') {
-			return false;
+			return;
 		}
 
 		//get items to buy & purchased items 
@@ -21,15 +21,9 @@ function initializePage() {
 		var itemToAdd = $('input#item').val();
 		$('input#item').val("");
 
-		var listItem = $("<li><input type='checkbox' name=" + itemToAdd + " value=" + itemToAdd + "> " + itemToAdd + " <button class='delete'><strong>-</strong> Delete</button></li>");
+		var listItem = $("<li><input type='checkbox' name=" + itemToAdd + " value=" + itemToAdd + "> " + itemToAdd + " <a class='delete' href='#'><strong>-</strong> Delete</a></li>");
 		listItem.attr("id","items[" + numberOfItems++ + "]");
 		addItems(listItem);
-
-		listItem.find("a").click(function() {
-			$(this).parent().hide('slow', function() {
-
-			});
-		});
 
 
 		function addItems(listItem) {
