@@ -8,12 +8,8 @@ h1 {
 	text-align: center;
 	color: blue;
 }
-a {
+button {
 	min-height: 15px;
 	margin-right: 10px;
 	float: right;
-	border: 1px solid black;
-	background-color: black;
-	color: white;
-	text-decoration: none;
 }
